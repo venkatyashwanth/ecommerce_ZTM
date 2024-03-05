@@ -3,8 +3,11 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
+import Navigation from "./routes/navigation/navigation.component";
 import ErrorPage from './ErrorPage';
 import Home from "./routes/home/home.component";
+
+
 
 const Shop = () => {
   return (
@@ -17,13 +20,17 @@ const Shop = () => {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <Navigation />,
     errorElement: <ErrorPage />,
     children:[
       {
+        path:'/',
+        element: <Home/>
+      },
+      {
         path:'shop',
         element: <Shop/>
-      }
+      },
     ]
   },
 ]);
