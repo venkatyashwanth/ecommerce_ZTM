@@ -6,12 +6,25 @@ import {
 import ErrorPage from './ErrorPage';
 import Home from "./routes/home/home.component";
 
+const Shop = () => {
+  return (
+    <div>
+      <h1>I am shopping</h1>
+    </div>
+  )
+}
 
 const router = createBrowserRouter([
   {
-    path: "/home",
-    element: <Home/>,
-    errorElement: <ErrorPage/>
+    path: "/",
+    element: <Home />,
+    errorElement: <ErrorPage />,
+    children:[
+      {
+        path:'shop',
+        element: <Shop/>
+      }
+    ]
   },
 ]);
 
