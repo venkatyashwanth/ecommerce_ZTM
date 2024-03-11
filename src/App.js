@@ -6,7 +6,7 @@ import {
 import Navigation from "./routes/navigation/navigation.component";
 import ErrorPage from './ErrorPage';
 import Home from "./routes/home/home.component";
-
+import SignIn from "./routes/sign-in/sign-in.component";
 
 
 const Shop = () => {
@@ -31,6 +31,10 @@ const router = createBrowserRouter([
         path:'shop',
         element: <Shop/>
       },
+      {
+        path: 'sign-in',
+        element: <SignIn/>
+      }
     ]
   },
 ]);
